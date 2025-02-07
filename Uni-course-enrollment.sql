@@ -28,3 +28,30 @@ CREATE TABLE enrollments (
     enrollment_date DATE,
     PRIMARY KEY (student_id, course_id)
 );
+
+
+-- Thee Data
+INSERT INTO students (first_name, last_name, email, school_enrollment_date) VALUES
+('John', 'Doe', 'john.doe@example.com', '2023-09-01'),
+('Jane', 'Smith', 'jane.smith@example.com', '2023-09-01'),
+('Alice', 'Johnson', 'alice.johnson@example.com', '2022-08-20'),
+('Bob', 'Brown', 'bob.brown@example.com', '2021-07-15'),
+('Charlie', 'Davis', 'charlie.davis@example.com', '2024-01-10');
+
+INSERT INTO professors (first_name, last_name, department) VALUES
+('Dr. Emily', 'Clark', 'Physics'),
+('Dr. Alan', 'Turing', 'Computer Science'),
+('Dr. Marie', 'Curie', 'Chemistry'),
+('Dr. Richard', 'Feynman', 'Mathematics');
+
+INSERT INTO courses (course_name, course_description, professor_id) VALUES
+('Physics 101', 'Introductory Physics', 1),
+('Computer Science 101', 'Basics of Computing', 2),
+('Organic Chemistry', 'Introduction to Organic Chemistry', 3);
+
+INSERT INTO enrollments (student_id, course_id, enrollment_date) VALUES
+(1, 1, '2024-02-01'),
+(2, 1, '2024-02-02'),
+(3, 2, '2024-02-03'),
+(4, 2, '2024-02-04'),
+(5, 3, '2024-02-05');
