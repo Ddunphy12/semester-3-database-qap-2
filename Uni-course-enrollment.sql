@@ -62,7 +62,7 @@ JOIN enrollments ON students.id = enrollments.student_id
 JOIN courses ON enrollments.course_id = courses.id
 WHERE courses.course_name = 'Physics 101';
 
-SELECT courses.course_name, professors.first_name || ' ' || professors.last_name AS professor_name FROM courses
+SELECT courses.course_name, professors.first_name || ' ' || professors.last_name AS professor_name FROM courses -- Is this the best way of doing this?
 JOIN professors ON courses.professor_id = professors.id;
 
 SELECT DISTINCT courses.course_name FROM courses
