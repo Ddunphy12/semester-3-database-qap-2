@@ -55,3 +55,15 @@ INSERT INTO enrollments (student_id, course_id, enrollment_date) VALUES
 (3, 2, '2024-02-03'),
 (4, 2, '2024-02-04'),
 (5, 3, '2024-02-05');
+
+-- Queries
+SELECT first_name || ' ' || last_name AS full_name FROM students 
+JOIN enrollments ON students.id = enrollments.student_id
+JOIN courses ON enrollments.course_id = courses.id
+WHERE courses.course_name = 'Physics 101';
+
+SELECT courses.course_name, professors.first_name || ' ' || professors.last_name AS professor_name FROM courses
+JOIN professors ON courses.professor_id = professors.id;
+
+SELECT DISTINCT courses.course_name FROM courses
+JOIN enrollments ON courses.id = enrollments.course_id;
