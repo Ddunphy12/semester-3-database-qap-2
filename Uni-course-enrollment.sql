@@ -67,3 +67,9 @@ JOIN professors ON courses.professor_id = professors.id;
 
 SELECT DISTINCT courses.course_name FROM courses
 JOIN enrollments ON courses.id = enrollments.course_id;
+
+-- My single update
+UPDATE students SET email = 'john.newemail@example.com' WHERE id = 1;
+
+-- My single Delete
+DELETE FROM enrollments WHERE student_id = 1 AND course_id = 1;
