@@ -5,7 +5,7 @@ CREATE TABLE students (
     first_name VARCHAR(50),
     last_name VARCHAR(50),
     email VARCHAR(50) UNIQUE,
-    school_enroll_date DATE
+    school_enrollment_date DATE
 );
 
 CREATE TABLE professors (
@@ -19,7 +19,8 @@ CREATE TABLE courses (
     id SERIAL PRIMARY KEY,
     course_name VARCHAR(100),
     course_description TEXT,
-    professor_id INT REFERENCES professors(id)
+    professor_id INT REFERENCES professors(id) ON DELETE SET NULL
+
 );
 
 CREATE TABLE enrollments (
